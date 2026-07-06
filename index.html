@@ -28,7 +28,7 @@ new TradingView.widget({autosize:true,symbol:"OANDA:XAUUSD",interval:"15",timezo
 <script>
 const rates=[["999(Jewelry)",1],["999.9",1.01],["916 / 22K",.916],["965",.965],["950",.95],["850",.85],["835",.835],["750 / 18K",.75],["700",.7],["585",.585],["375",.375]];
 const bars=[["Gold : 1 Kilo 999.9"],["Gold : 100 GM 999.9"],["Gold : 50 GM 999.9"],["Gold : 1 Tael 999.9"],["Scrap Gold Fine Weight 1KG"],["Silver : 1 Gram 999"],["Gold OZ"],["Silver OZ"],["USD/MYR"]];
-let base=527,prev={},prevM={};
+let base=535,prev={},prevM={};
 function draw(){
 let p=base+Math.sin(Date.now()/60000)*2;
 let h="";
