@@ -13,7 +13,7 @@ th{background:#d4af37;color:#000}.green{color:#00ff88}.red{color:#ff6666}
 <div class="box">
 <h1>GOLD DASHBOARD</h1>
 <div style="width:100%;max-width:900px;border:2px solid #d4af37;border-radius:12px;padding:18px;background:#101010;margin:0 auto 25px;">
-<h2>LIVE MKS PRICE (WE BUY)</h2>
+<h2>LIVE LOMBONG PRICE (WE BUY)</h2>
 <table style='width:100%;max-width:900px;margin:15px auto;'><thead><tr><th>Product</th><th>Sell Price</th></tr></thead><tbody id="mks"></tbody></table></div>
 
 <div style="width:100%;max-width:900px;border:2px solid #d4af37;border-radius:12px;padding:18px;background:#101010;margin:0 auto 25px;">
@@ -39,7 +39,7 @@ const bars=[
 ["Silver OZ",61.65],
 ["USD/MYR",4.0685]
 ];
-let base=548,prev={},prevM={};
+let base=545,prev={},prevM={};
 function draw(){
 let p=base+Math.sin(Date.now()/60000)*2;
 let h="";
