@@ -10,9 +10,9 @@ th{background:#d4af37;color:#000}.green{color:#00ff88}.red{color:#ff6666}
 #last{text-align:center;color:#d4af37;margin-top:12px}
 </style></head><body>
 <div class="box">
-<h1>FOURKAYGOLD DASHBOARD</h1>
+<h1>GOLD DASHBOARD</h1>
 <div style="width:100%;max-width:900px;border:2px solid #d4af37;border-radius:12px;padding:18px;background:#101010;margin:0 auto 25px;">
-<h2>LIVE LOMBONG PRICE (WE BUY)</h2>
+<h2>LIVE MKS PRICE (WE BUY)</h2>
 <table style='width:100%;max-width:900px;margin:15px auto;'><thead><tr><th>Product</th><th>Sell Price</th></tr></thead><tbody id="mks"></tbody></table></div>
 
 <div style="width:100%;max-width:900px;border:2px solid #d4af37;border-radius:12px;padding:18px;background:#101010;margin:0 auto 25px;">
@@ -28,7 +28,7 @@ new TradingView.widget({autosize:true,symbol:"OANDA:XAUUSD",interval:"15",timezo
 <script>
 const rates=[["999(Jewelry)",1],["999.9",1.01],["916 / 22K",.916],["965",.965],["950",.95],["850",.85],["835",.835],["750 / 18K",.75],["700",.7],["585",.585],["375",.375]];
 const bars=[["Gold : 1 Kilo 999.9"],["Gold : 100 GM 999.9"],["Gold : 50 GM 999.9"],["Gold : 1 Tael 999.9"],["Scrap Gold Fine Weight 1KG"],["Silver : 1 Gram 999"],["Gold OZ"],["Silver OZ"],["USD/MYR"]];
-let base=380,prev={},prevM={};
+let base=548,prev={},prevM={};
 function draw(){
 let p=base+Math.sin(Date.now()/60000)*2;
 let h="";
