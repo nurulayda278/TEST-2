@@ -34,8 +34,8 @@ let p=base+Math.sin(Date.now()/60000)*2;
 let h="";
 for(const [n] of bars){
  let price=0;
- if(n==="Gold : 1 Kilo 999.9") price=p*1000;
- else if(n==="Gold : 100 GM 999.9") price=p*100;
+ if(n==="Gold : 1 Kilo 999.9") price=p*0.99*0.985;
+ else if(n==="Gold : 100 GM 999.9") price=p*0.99*0.985;
  else if(n==="Gold : 50 GM 999.9") price=p*50;
  else if(n==="Gold : 1 Tael 999.9") price=p*37.429;
  else if(n==="Scrap Gold Fine Weight 1KG") price=p*998;
