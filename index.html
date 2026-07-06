@@ -29,11 +29,11 @@ new TradingView.widget({autosize:true,symbol:"OANDA:XAUUSD",interval:"15",timezo
 <script>
 const rates=[["999(Jewelry)",1],["999.9",1.01],["916 / 22K",.916],["965",.965],["950",.95],["850",.85],["835",.835],["750 / 18K",.75],["700",.7],["585",.585],["375",.375]];
 const bars=[
-["Gold : 1 Kilo 999.9",543520],
-["Gold : 100 GM 999.9",54350],
-["Gold : 50 GM 999.9",27175],
-["Gold : 1 Tael 999.9",20540],
-["Scrap Gold Fine Weight 1KG",542860],
+["Gold : 1 Kilo 999.9",()=>mksBase*1000],
+["Gold : 100 GM 999.9",()=>mksBase*100],
+["Gold : 50 GM 999.9",()=>mksBase*50],
+["Gold : 1 Tael 999.9",()=>mksBase*37.429],
+["Scrap Gold Fine Weight 1KG",()=>mksBase*999],
 ["Silver : 1 Gram 999",7.68],
 ["Gold OZ",4160.00],
 ["Silver OZ",61.65],
@@ -46,7 +46,8 @@ function draw(){
 let p=base+Math.sin(Date.now()/60000)*2;
 let h="";
 for(const [n,b] of bars){
- let price=b+(Math.sin(Date.now()/70000)*(b*0.0008));
+ let value = typeof b==="function" ? b() : b;
+let price=value+(Math.sin(Date.now()/70000)*(value*0.0008));
  let c="green"; if(prevM[n]!=null&&price<prevM[n])c="red"; prevM[n]=price;
  let disp=(n==="USD/MYR")?price.toFixed(4):(price>=1000?price.toLocaleString('en-MY',{maximumFractionDigits:0}):price.toFixed(2));
  let prefix=(n==="USD/MYR")?"":"RM ";
